@@ -1,0 +1,182 @@
+Existing styles
+
+.hamburger {
+    display: none;
+  font-size: 24px;
+  color: #ccc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  }
+  
+  .hamburger.active {
+    /* Styles for cross icon */
+    transform: rotate(45deg); /* 45 degrees rotation for creating the cross effect */
+  }
+  
+  .hamburger.active::before,
+  .hamburger.active::after {
+    content: '';
+    display: block;
+    width: 100%; /* Adjust as needed */
+    height: 2px; /* Adjust as needed */
+    background-color: #000; /* Adjust color as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hamburger.active::before {
+    transform: translate(-50%, -50%) rotate(90deg); /* Create the other line of the cross */
+  }
+  
+  /* Adjust the positioning of the lines in the cross as needed */
+  
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: -40%;
+  top: 0%;
+  
+}
+.logo{
+  z-index: 100;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333333d8;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+
+
+.links {
+  display: flex;
+}
+
+.tab {
+  padding: 10px;
+  color: #ccc;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease; 
+}
+
+.tab:hover {
+  color: #fff;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    margin-left: 35%;
+    backdrop-filter: blur(10px);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20%;
+    
+  }
+
+  .links.show {
+    display: flex;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+  .logo{
+    height: 80px;
+    width: 70px;
+    margin-top: 5px;
+    z-index: 100;
+  }
+}
+
+
+.contact {
+  margin-left: auto;
+  color: white;
+}
+
+.logo{
+  margin-left: 0px;
+  position: fixed;
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    margin-left: 35%;
+    backdrop-filter: blur(10px);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20%;
+    
+  }
+
+  .links.show {
+    display: flex;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+  .logo{
+    height: 80px;
+    width: 70px;
+    margin-top: 5px;
+    z-index: 100;
+  }
+}
+
+
+.contact {
+  margin-left: auto;
+  color: white;
+}
+
+.logo{
+  margin-left: 0px;
+  position: fixed;
+}
+
